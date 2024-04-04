@@ -14,7 +14,7 @@ return {
           return "make install_jsregexp"
         end)(),
       },
-      "saadparwaiz1/cmp_luasnip",
+      { "saadparwaiz1/cmp_luasnip" },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
