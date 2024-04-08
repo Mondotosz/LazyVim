@@ -1,7 +1,15 @@
 return {
   "davidmh/cspell.nvim",
   dependencies = {
-    "nvimtools/none-ls.nvim",
+    { "nvimtools/none-ls.nvim" },
+    {
+      "williamboman/mason.nvim",
+      opts = {
+        ensure_installed = {
+          "cspell",
+        },
+      },
+    },
   },
   lazy = true,
   keys = {
