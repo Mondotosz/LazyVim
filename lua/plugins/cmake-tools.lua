@@ -68,19 +68,25 @@ return {
     },
     { "<leader>Cg", "<cmd>CMakeGenerate<cr>", desc = "Cmake Generate" },
   },
-  dependencies = { "akinsho/toggleterm.nvim" },
+  dependencies = { "akinsho/toggleterm.nvim", "stevearc/overseer.nvim" },
   opts = {
     cmake_build_directory = "build/${variant:buildType}",
     cmake_soft_link_compile_commands = true, -- this will automatically make a soft link from compile commands file to project root dir
     cmake_compile_commands_from_lsp = false,
     cmake_runner = {
-      name = "toggleterm",
+      name = "overseer",
       opts = {}, -- the options the runner will get, possible values depend on the runner type. See `default_opts` for possible values.
       default_opts = { -- a list of default and possible values for runners
-        toggleterm = {
-          direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float'
-          close_on_exit = false, -- whether close the terminal when exit
-          auto_scroll = true, -- whether auto scroll to the bottom
+        overseer = {
+          new_task_opts = {
+            strategy = {
+              "toggleterm",
+              direction = "horizontal",
+              autos_croll = true,
+              quit_on_exit = "success",
+            },
+          }, -- options to pass into the `overseer.new_task` command
+          -- on_new_task = function(task) end, -- a function that gets overseer.Task when it is created, before calling `task:start`
         },
       },
     },
