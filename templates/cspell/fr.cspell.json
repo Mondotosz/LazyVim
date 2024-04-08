@@ -1,0 +1,13 @@
+{
+  "language": "en,fr",
+  "version": "0.2",
+  "dictionaries": [
+    "fr-fr"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "path": "~\/.local\/share\/cspell-dicts\/fr-fr.trie",
+      "name": "fr-fr"
+    }
+  ]
+}
