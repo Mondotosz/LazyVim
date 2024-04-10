@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.opt.scrolloff = 10
 vim.opt.spell = nospell
+vim.opt.spelllang = { "en", "fr" }
