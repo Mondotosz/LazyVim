@@ -14,4 +14,5 @@ return {
       "prompt",
     },
   },
+  enabled = false,
 }

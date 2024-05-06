@@ -15,6 +15,13 @@ return {
         end)(),
       },
       { "saadparwaiz1/cmp_luasnip" },
+      {
+        "paopaol/cmp-doxygen",
+        dependencies = {
+          "nvim-treesitter/nvim-treesitter",
+          "nvim-treesitter/nvim-treesitter-textobjects",
+        },
+      },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -68,8 +75,25 @@ return {
           end
         end, { "i", "s" }),
       })
+      opts.formatting = {
+        format = function(entry, item)
+          local overrides = require("lazyvim.config").icons.sources
+          local icons = require("lazyvim.config").icons.kinds
+
+          if icons[item.kind] then
+            item.kind = icons[item.kind] .. item.kind
+          end
+
+          if overrides[entry.source.name] then -- override for specific sources
+            item.kind = overrides[entry.source.name]
+          end
+
+          return item
+        end,
+      }
 
       table.insert(opts.sources, { name = "luasnip" })
+      table.insert(opts.sources, { name = "doxygen" })
     end,
   },
 }
