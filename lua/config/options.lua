@@ -4,3 +4,4 @@
 vim.opt.scrolloff = 10
 vim.opt.spell = false
 vim.opt.spelllang = { "en", "fr" }
+vim.opt.colorcolumn = "80"

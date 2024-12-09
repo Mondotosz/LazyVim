@@ -8,6 +8,22 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+    opts = {
+      pickers = {
+        man_pages = {
+          sections = { "ALL" },
+        },
+      },
+    },
+    -- keys = {
+    --   {
+    --     "<leader>sM",
+    --     function()
+    --       require("telescope.builtin").man_pages()
+    --     end,
+    --     desc = "Man Pages",
+    --   },
+    -- },
   },
   {
     "jemag/telescope-diff.nvim",

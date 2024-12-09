@@ -40,6 +40,7 @@ return {
     { "<leader>t8", toggle_n(8, "󰎹"), desc = "ToggleTerm: Show terminal 8" },
     { "<leader>t9", toggle_n(9, "󰎼"), desc = "ToggleTerm: Show terminal 9" },
     { "<leader>ts", "<cmd>TermSelect<cr>", desc = "ToggleTerm: Select terminal" },
+    { "<Esc><Esc>", "<c-\\><c-n>", desc = "Switch to normal mode", mode = "t" },
   },
   opts = {
     direction = "float",
