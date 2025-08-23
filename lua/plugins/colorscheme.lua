@@ -81,6 +81,11 @@ return {
           crust = "#dddddd",
         },
       },
+      custom_highlights = function(colors)
+        return {
+          SpellBad = { sp = colors.yellow },
+        }
+      end,
     },
   },
   {
