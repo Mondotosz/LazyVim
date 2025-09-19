@@ -5,4 +5,5 @@ return {
       fat_headline_lower_string = "",
     },
   },
+  enabled = false,
 }

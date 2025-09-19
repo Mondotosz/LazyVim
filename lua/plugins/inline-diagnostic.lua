@@ -5,6 +5,7 @@ return {
   opts = {
     options = {
       show_source = true,
+      enable_on_insert = false,
       multilines = true,
       show_all_diags_on_cursorline = true,
       overflow = {
@@ -17,13 +18,13 @@ return {
     },
   },
   keys = {
-    {
-      "<leader>uD",
-      function()
-        require("tiny-inline-diagnostic").toggle()
-      end,
-      desc = "Toggle inline diagnostic",
-    },
+    -- {
+    --   "<leader>uD",
+    --   function()
+    --     require("tiny-inline-diagnostic").toggle()
+    --   end,
+    --   desc = "Toggle inline diagnostic",
+    -- },
     -- {
     --   "<leader>cD",
     --   function()

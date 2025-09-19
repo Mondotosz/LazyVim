@@ -5,3 +5,11 @@ vim.opt.scrolloff = 10
 vim.opt.spell = false
 vim.opt.spelllang = { "en", "fr" }
 vim.opt.colorcolumn = "80"
+-- vim.lsp.set_log_level("off")
+vim.g.snacks_animate = false
+vim.opt.mouse = ""
+vim.filetype.add({
+  extension = {
+    sage = "python",
+  },
+})
