@@ -11,5 +11,13 @@ return {
       ["<Tab>"] = {},
       ["<S-Tab>"] = {},
     },
+    completion = {
+      list = {
+        selection = {
+          preselect = true,
+          auto_insert = true,
+        },
+      },
+    },
   },
 }
